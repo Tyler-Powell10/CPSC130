@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            we are moving from static to dynamic web pages
+        </title>
+    </head>
+
+
+    <body>
+        <!-- create table with a border around it, making it centered -->
+       <div>
+            <table style="border: solid; margin-right: auto; margin-left: auto;">
+                
+        <!-- Create table headers for the first row, adding a border around them -->
+                <tr>
+                    <th style="border: solid"> 
+                        2004
+                    </th>
+
+                    <th style="border: solid"> 
+                        2020
+                    </th>
+                </tr>
+        <!-- Create second row with a border around each cell, also create the first column named "2004," Add in the question mark image, then add 
+        the picture of the jetta when the mouse is over the question mark, upon exiting return back to the question mark image-->
+                <tr>
+                    <td style="border: solid;">
+                        <img id="2004" src="/Users/tylerpowell/Documents/GitHub/Html/Javascript/CPSC130/Assignment 4/questionMark.jpeg" 
+                        width="250" height="350"
+                        onmouseover="this.src='/Users/tylerpowell/Documents/GitHub/Html/Javascript/CPSC130/Assignment 4/jetta.png'" 
+                        onmouseout="this.src=' /Users/tylerpowell/Documents/GitHub/Html/Javascript/CPSC130/Assignment 4/questionMark.jpeg'">
+                    </td>  
+
+        <!-- Create second column with a border around each cell, named "2020," Add in the question mark image, then add 
+        the picture of the wrx when the mouse is over the question mark, upon exiting return back to the question mark image-->
+                    <td style="border: solid;"> 
+                        <img id="2020" src="/Users/tylerpowell/Documents/GitHub/Html/Javascript/CPSC130/Assignment 4/questionMark.jpeg" 
+                        width="450" height="350"
+                        onmouseover="this.src='/Users/tylerpowell/Documents/GitHub/Html/Javascript/CPSC130/Assignment 4/subie.jpg'" 
+                        onmouseout="this.src=' /Users/tylerpowell/Documents/GitHub/Html/Javascript/CPSC130/Assignment 4/questionMark.jpeg'">
+                    </td>
+                </tr>
+            </table>
+       </div>
+    </body>
+</html>

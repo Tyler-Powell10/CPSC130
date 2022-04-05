@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <title>
+        in class practice javascript mouse on mouse out
+    </title>
+</head>
+
+<body>
+
+
+    <script type="text/javascript">
+
+        function showMessage() {
+
+            //assume that gradeBox has some grades 
+            //results: the message about your grades 
+            var grade;
+
+            grade = parseFloat(document.getElementById('gradeBox').value);
+
+            if (grade < 60) {
+                alert('you failed the class');
+
+            } else {
+
+                if (grade > 60) {
+                    alert('you failed');
+                }
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    Enter Your amount: <input id="inputTextBill" type="text" value="" size="12"> <br>
+    Final Bill: <input id="finalBill" type="text" value="" size="12"> <br>
+    <br>
+    <input type="button" value="click here to calculate" onclick="bill=parseFloat(document.getElementById('inputTextBill').value);
+        tip=bill*(20/100);
+        finalBill=bill+tip;
+        document.getElementById('finalBill').value=finalBill;">
+
+
+
+    <br>
+    <hr>
+    <br>
+
+    <h2> Image Swapper </h2>
+    <img id="leftImg" src="http://balance3e.com/Images/happy.gif">
+    <img id="rightImg" src="http://balance3e.com/Images/sad.gif">
+
+    <input type="button" value="Click here to swap" onclick="saved=document.getElementById('leftImg').src;
+        document.getElementById('leftImg').src=document.getElementById('rightImg').src;
+        document.getElementById('rightImg').src=saved;">
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    Enter Your Name: <input id="inputName" type="text" value="" size="12"> <br>
+    Enter Your Grade: <input id="inputGrade" type="text" value="" size="12"> <br>
+    Enter Your Address: <input id="inputAddress" type="text" value="" size="12"> <br>
+    Enter Your State: <input id="inputState" type="text" value="" size="12"> <br>
+    Enter Your City: <input id="inputCity" type="text" value="" size="12"> <br>
+
+
+    <input type="button" value="click to display" onclick="document.getElementById('div1') 
+        .innerHTML= '<p> hello' + ' my name is ' + document.getElementById('inputName').value +
+        document.getElementById('inputGrade').value +
+        document.getElementById('inputAddress').value +
+        document.getElementById('inputState').value +
+        document.getElementById('inputCity').value + '</p>'">
+
+    <div id="div1">
+        Hi, I dont know my name.
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    <div style="text-align: center;">
+
+        <h1>
+            Blockchain
+        </h1>
+
+        <br> Blockchain Game <br>
+
+        <p>
+            A blockchain game is a video game that includes elements that use cryptography-based blockchain
+            technologies.
+            Blockchain elements in these games are most often based on the use of
+            cryptocurrency or non-fungible tokens which players can buy, sell, or trade with other players.
+        </p>
+
+        for more information click
+
+        <a href="https://en.wikipedia.org/wiki/Blockchain_game"> Here </a>
+
+        <br>
+
+        <img src="/Users/tylerpowell/Downloads/Blockchain1.jpeg" width="400" height="235" align="center">
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    <h1>Left-Justified Big Heading</h1>
+    <p>
+        left-justified text
+    </p>
+
+    <hr>
+    <h2 style="text-align:center;"> Centered Medium Heading</h2>
+    <p style="text-align: center;">
+        centered text <br>
+        and more centered text
+    </p>
+
+    <hr>
+
+    <div style="text-align: right;">
+        <h3>Right-Justified Small Heading </h3>
+        <p>
+            right-justified text <br>
+            and more right-justified text
+        </p>
+
+    </div>
+
+
+</body>
+
+</html>
