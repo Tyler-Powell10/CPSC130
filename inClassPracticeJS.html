@@ -2,35 +2,46 @@
 
 <head>
     <title>
-        in class practice javascript mouse on mouse out
+        in class practice
     </title>
 </head>
 
 <body>
 
+<!--! change this to the slot machine rather than rolling the dice-->
 
-    <script type="text/javascript">
+    <script>
+        function RollDice() { //assumes die images are in the image
+            // results display 2 random die rolls and keep count in rollSpan
+            var roll1;
+            var roll2;
 
-        function showMessage() {
+            roll1 = RandomInt(1, 6);
+            roll2 = RandomInt(1, 6);
 
-            //assume that gradeBox has some grades 
-            //results: the message about your grades 
-            var grade;
+            document.getElementById('die1Img').src = 'http:/balance3e.com/Images/die' + roll1 + '.gif';
+            document.getElementById('die2Img').src = 'http:/balance3e.com/Images/die' + roll2 + '.gif';
 
-            grade = parseFloat(document.getElementById('gradeBox').value);
-
-            if (grade < 60) {
-                alert('you failed the class');
-
-            } else {
-
-                if (grade > 60) {
-                    alert('you failed');
-                }
-            }
+            document.getElementById('rollSpan').innerHTML =
+                parseFloat(document.getElementById('rollSpan').innerHTML) + 1;
         }
-
     </script>
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            <p>
+                <img id="die1Img" alt="die image" src="http://balance3e.com/Images/die1.gif">
+                <img id="die2Img" alt="die image" src="http://balance3e.com/Images/die1.gif">
+            </p>
+            <input style="background-color: black; color: antiquewhite;" type="button" value="Click to Roll" onclick="RollDice();">
+            <hr>
+            <p>
+                Number of rolls: <span id="rollSpan">0</span>
+            </p>
+        </div>
+    </body>
+
 
 
 
@@ -40,10 +51,47 @@
     <br>
     <br>
     <hr>
-    <br>
 
-    Enter Your amount: <input id="inputTextBill" type="text" value="" size="12"> <br>
-    Final Bill: <input id="finalBill" type="text" value="" size="12"> <br>
+
+    <script>
+        function RollDice() { //assumes die images are in the image
+            // results display 2 random die rolls and keep count in rollSpan
+            var roll1;
+            var roll2;
+
+            roll1 = RandomInt(1, 6);
+            roll2 = RandomInt(1, 6);
+
+            document.getElementById('die1Img').src = 'http:/balance3e.com/Images/die' + roll1 + '.gif';
+            document.getElementById('die2Img').src = 'http:/balance3e.com/Images/die' + roll2 + '.gif';
+
+            document.getElementById('rollSpan').innerHTML =
+                parseFloat(document.getElementById('rollSpan').innerHTML) + 1;
+        }
+    </script>
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            <p>
+                <img id="die1Img" alt="die image" src="http://balance3e.com/Images/die1.gif">
+                <img id="die2Img" alt="die image" src="http://balance3e.com/Images/die1.gif">
+            </p>
+            <input style="background-color: black; color: antiquewhite;" type="button" value="Click to Roll" onclick="RollDice();">
+            <hr>
+            <p>
+                Number of rolls: <span id="rollSpan">0</span>
+            </p>
+        </div>
+    </body>
+
+
+    <br>
+    <br>
+    <hr>
+
+    
+    <br> Enter Your amount: <input id="inputTextBill" type="text" value="" size="12"> <br> Final Bill: <input id="finalBill" type="text" value="" size="12"> <br>
     <br>
     <input type="button" value="click here to calculate" onclick="bill=parseFloat(document.getElementById('inputTextBill').value);
         tip=bill*(20/100);
@@ -67,14 +115,8 @@
 
     <br>
     <hr>
-    <br>
-
-
-    Enter Your Name: <input id="inputName" type="text" value="" size="12"> <br>
-    Enter Your Grade: <input id="inputGrade" type="text" value="" size="12"> <br>
-    Enter Your Address: <input id="inputAddress" type="text" value="" size="12"> <br>
-    Enter Your State: <input id="inputState" type="text" value="" size="12"> <br>
-    Enter Your City: <input id="inputCity" type="text" value="" size="12"> <br>
+    <br> Enter Your Name: <input id="inputName" type="text" value="" size="12"> <br> Enter Your Grade: <input id="inputGrade" type="text" value="" size="12"> <br> Enter Your Address: <input id="inputAddress" type="text" value="" size="12"> <br> Enter
+    Your State: <input id="inputState" type="text" value="" size="12"> <br> Enter Your City: <input id="inputCity" type="text" value="" size="12"> <br>
 
 
     <input type="button" value="click to display" onclick="document.getElementById('div1') 
@@ -103,10 +145,8 @@
         <br> Blockchain Game <br>
 
         <p>
-            A blockchain game is a video game that includes elements that use cryptography-based blockchain
-            technologies.
-            Blockchain elements in these games are most often based on the use of
-            cryptocurrency or non-fungible tokens which players can buy, sell, or trade with other players.
+            A blockchain game is a video game that includes elements that use cryptography-based blockchain technologies. Blockchain elements in these games are most often based on the use of cryptocurrency or non-fungible tokens which players can buy, sell, or trade
+            with other players.
         </p>
 
         for more information click
@@ -132,8 +172,7 @@
     <hr>
     <h2 style="text-align:center;"> Centered Medium Heading</h2>
     <p style="text-align: center;">
-        centered text <br>
-        and more centered text
+        centered text <br> and more centered text
     </p>
 
     <hr>
@@ -141,8 +180,7 @@
     <div style="text-align: right;">
         <h3>Right-Justified Small Heading </h3>
         <p>
-            right-justified text <br>
-            and more right-justified text
+            right-justified text <br> and more right-justified text
         </p>
 
     </div>

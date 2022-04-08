@@ -13,44 +13,27 @@
 </header>
 <hr style="height:4px;border-width:0;color:rgb(255, 0, 0);background-color:rgb(255, 0, 0)">
 
-<body>
 
-    <script src="images/random.js">
-        function randomImage() {
 
-            var img1;
-            var img2;
+<script>
+    function randomImage() {
+        imgNum = Math.floor(5 * Math.random());
+        document.getElementById('imgRand').src =
+            'images/img' + imgNum + '.jpeg';
+    };
+</script>
 
-            image1 = RandomInt(1, 5);
-            image2 = RandomInt(1, 5);
-
-            document.getElementById('img1').src = 'images/' + img1 + '.jpeg';
-            document.getElementById('img2').src = 'images/' + img2 + '.jpeg';
-        };
-    </script>
-
-    <div style="text-align: center;">
-        <p>
-            <img id="image1" alt="Work in Progress" src="images/img1.jpeg">
-            <img id="image2" alt="Work in Progress" src="images/img2.jpeg">
-            <img id="image3" alt="Work in Progress" src="images/img3.jpeg">
-            <img id="image4" alt="Work in Progress" src="images/img4.jpeg">
-            <img id="image5" alt="Work in Progress" src="images/img5.jpeg">
-        </p>
-
-        <hr>
+<body onload="setInterval('randomImage()', 5000);">
+    <div style="text-align:center;">
+        <img id="imgRand" alt="Random Image" width="100" height="100">
     </div>
 
-    <!-- <div style="text-align: center; color: rgb(255, 0, 0);"> 
-        Application Status <br>
-        <br>
-        add images and give them an ID
-    <img id="imgLeft" src="https://image.shutterstock.com/image-vector/pending-stampstampsignpending-260nw-434996098.jpg" height="100" width="100">
-
-    <img id="imgRight" src="https://img3.stockfresh.com/files/c/carmen2011/m/78/4139232_stock-vector-pending-review-stamp.jpg" height="100" width="100">
+    <div style="text-align: center; color: rgb(255, 0, 0);">
+        Application Status <br> <br>
+        <!-- add images and give them an ID-->
+        <img id="imgLeft" src="https://image.shutterstock.com/image-vector/pending-stampstampsignpending-260nw-434996098.jpg" height="100" width="100">
+        <img id="imgRight" src="https://img3.stockfresh.com/files/c/carmen2011/m/78/4139232_stock-vector-pending-review-stamp.jpg" height="100" width="100">
     </div>
-    -->
-
     <br>
     <hr style="height:4px;border-width:0;color:rgb(255, 0, 0);background-color:rgb(255, 0, 0)">
     <br>
