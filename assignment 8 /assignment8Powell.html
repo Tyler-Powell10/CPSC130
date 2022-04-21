@@ -1,0 +1,115 @@
+<html style="background-color: black">
+
+<head>
+    <title>
+        Moving Towards Interactive web pages using funtions in Javascript
+    </title>
+</head>
+
+<header>
+    <h2 style="text-align: center; color: rgb(255, 0, 0);">
+        Application for UC Berkley Under-Graduate School
+    </h2>
+</header>
+<hr style="height:4px;border-width:0;color:rgb(255, 0, 0);background-color:rgb(255, 0, 0)">
+
+
+
+<script>
+    // function to generate random image
+    function randomImage() {
+        imgNum = Math.floor(5 * Math.random());
+        document.getElementById('imgRand').src =
+            'images/img' + imgNum + '.jpeg';
+    };
+
+    //function  to  print pass/fail
+    function application() {
+
+        writingScoreValue = parseFloat(document.getElementById('writingScore').value);
+        criticalReadingScoreValue = parseFloat(document.getElementById('criticalReadingScore').value);
+        mathScoreValue = parseFloat(document.getElementById('mathScore').value);
+        totalValue = criticalReadingScoreValue + mathScoreValue + writingScoreValue;
+
+        //constants for pass/fail
+        const failScore = 400;
+        const passScore = 600;
+
+        if (totalValue <= failScore) {
+
+            msg = 'Sorry, please try later';
+        } else if (totalValue >= failScore && totalValue <= passScore) {
+
+            msg = 'Your application is in review. please upload your credentials';
+        } else if (totalValue >= passScore) {
+
+            msg = 'Crongrats your application has been accepted';
+        }
+
+
+        document.getElementById('divScore').innerHTML = 'Your total SAT Scores are:' + totalValue;
+
+        document.getElementById('divName').innerHTML = 'Greetings ' + document.getElementById('firstName').value + ' ' +
+            document.getElementById('lastName').value + '! Please review your entered scores carefully before submitting your application.';
+        document.getElementById('applicationResult').innerHTML = msg;
+
+    };
+
+    //image swapper function
+    function imageSwapper() {
+        saved = document.getElementById('imgLeft').src;
+        document.getElementById('imgLeft').src = document.getElementById('imgRight').src;
+        document.getElementById('imgRight').src = saved;
+    };
+</script>
+
+//load random image
+
+<body onload="setInterval('randomImage()', 5000);">
+    <div style="text-align:center;">
+        <img id="imgRand" alt="Random Image" width="100" height="100">
+    </div>
+
+    <div id="imgDiv" style="text-align: center; color: rgb(255, 0, 0);">
+        Application Status <br> <br>
+        <!-- add images and give them an ID-->
+        <img id="imgLeft" src="https://image.shutterstock.com/image-vector/pending-stampstampsignpending-260nw-434996098.jpg" height="100" width="100">
+        <img id="imgRight" src="https://img3.stockfresh.com/files/c/carmen2011/m/78/4139232_stock-vector-pending-review-stamp.jpg" height="100" width="100">
+    </div>
+    <br>
+    <hr style="height:4px;border-width:0;color:rgb(255, 0, 0);background-color:rgb(255, 0, 0)">
+    <br>
+
+    <div style="text-align: center; font-style: italic; color: rgb(255, 0, 0); font-size: 20px; font-weight: bold)">
+        Enter your personal information: <br>
+
+        <br>
+        <!-- Create text boxes that allow user input -->
+        Enter your First Name: <input id="firstName" type="text" value="" size="12" style="background-color: black; border-color: red; color:rgb(255, 0, 0)"> <br> <br> Enter your Last Name: <input id="lastName" type="text" value="" size="12" style="background-color: black; border-color: red; color:rgb(255, 0, 0)">        <br>
+
+        <br> Enter your SAT scores: <br>
+
+        <br>
+        <!-- create text boxes that allow for user input-->
+        Enter Writing Score: <input id="writingScore" type="text" value="" size="12" style="background-color: black; border-color: red; color:rgb(255, 0, 0)"> <br> <br> Enter Critical Reading Score: <input id="criticalReadingScore" type="text" value=""
+            size="12" style="background-color: black; border-color: red; color:rgb(255, 0, 0)"> <br> <br> Enter Math Score: <input id="mathScore" type="text" value="" size="12" style="background-color: black; border-color: red; color:rgb(255, 0, 0)"> <br>        <br>
+
+        <br>
+
+        <!-- create a button that computes total sat scores and swap images -->
+        <input type="button" value="Review Your Application" style="background-color: rgb(255, 0, 0); color: white; border-style: none;" onclick="application(); imageSwapper();">
+
+        <br>
+        <br>
+        <hr style="height:4px;border-width:0;color:rgb(255, 0, 0);background-color:rgb(255, 0, 0)">
+        <br>
+        <div id="divName"></div> <br>
+        <br>
+        <div id="divScore"></div>
+        <br>
+        <div id="applicationResult"></div>
+    </div>
+    <hr style="height:4px;border-width:0;color:rgb(255, 0, 0);background-color:rgb(255, 0, 0)">
+</body>
+
+</html>
